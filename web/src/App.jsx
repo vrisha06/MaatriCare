@@ -10,6 +10,7 @@ import Worklist from './pages/Worklist.jsx';
 import PatientDetail from './pages/PatientDetail.jsx';
 import Referrals from './pages/Referrals.jsx';
 import AdminDashboard from './pages/AdminDashboard.jsx';
+import Chat from './pages/Chat.jsx';
 
 const SessionContext = createContext(null);
 export const useSession = () => useContext(SessionContext);
@@ -25,6 +26,8 @@ export default function App() {
     return (
       <SessionContext.Provider value={{ session, setSession: update }}>
         <Routes>
+          {/* Mothers use the health guide without an account. */}
+          <Route path="/chat" element={<main><Chat /></main>} />
           <Route path="*" element={<Login />} />
         </Routes>
       </SessionContext.Provider>
@@ -41,6 +44,7 @@ export default function App() {
               <Route path="/" element={<AshaHome />} />
               <Route path="/register" element={<RegisterPatient />} />
               <Route path="/visit/:patientId" element={<NewVisit />} />
+              <Route path="/chat" element={<Chat />} />
             </>
           )}
           {role === 'doctor' && (

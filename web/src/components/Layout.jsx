@@ -3,7 +3,7 @@ import { useSession } from '../App.jsx';
 import { useOnline } from '../hooks.js';
 
 const NAV = {
-  asha: [['/', 'My patients'], ['/register', 'Register']],
+  asha: [['/', 'My patients'], ['/register', 'Register'], ['/chat', 'Health guide']],
   doctor: [['/', 'Worklist'], ['/referrals', 'Referrals']],
   admin: [['/', 'Dashboard'], ['/patients', 'Patients'], ['/referrals', 'Referrals']],
 };

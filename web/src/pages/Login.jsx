@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { api } from '../api.js';
 import { useSession } from '../App.jsx';
 
@@ -55,6 +55,7 @@ export default function Login() {
             </button>
           ))}
         </div>
+        <Link to="/chat" className="small">Health guide for mothers (no login needed) →</Link>
       </form>
     </div>
   );

@@ -14,6 +14,9 @@ See `MaatriCare PRD.pdf` for the full product requirements.
   them through Created → Accepted → In transit → Arrived → Outcome recorded → Closed.
 - **Admin view**: village risk heatmap, referral completion, overdue referrals, audit-chain check.
 - **Audit log**: every clinical action is written to an append-only, SHA-256 hash-chained log.
+- **Health guide chatbot** (`/chat`, no login; also in the ASHA menu): Hindi and English, understands
+  Hinglish, read-aloud and voice input where the browser supports them. Answers are fixed, reviewed
+  text, and any danger-sign word always gets the "call 108" answer. Runs on the device, so it works offline.
 
 > The model is trained on **synthetic data** (`ml/train.py`) and is not clinically validated.
 > It is decision support only.
@@ -47,5 +50,5 @@ ml/       synthetic data generator and model training
 
 ## Not built yet
 
-Chatbot and voice/IVR, teleconsultation, 108 EMS and SMS integration, ABDM/FHIR server, child and
+IVR for feature phones, more regional languages, teleconsultation, 108 EMS and SMS integration, ABDM/FHIR server, child and
 chronic risk models, blockchain anchoring, lab-slot and medicine-stock visibility.

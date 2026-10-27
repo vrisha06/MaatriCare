@@ -1,6 +1,7 @@
 export { assess, LEVELS, DANGER_SIGNS, model } from './risk.js';
 export { featurize, bmi } from './features.js';
 export { RANGES, rangeErrors, PATIENT_FIELDS, VISIT_FIELDS } from './validate.js';
+export * as chatbot from './chatbot.js';
 
 export const REFERRAL_STATUSES = ['created', 'accepted', 'in_transit', 'arrived', 'outcome_recorded', 'closed'];
 // Only the receiving facility can confirm these.
