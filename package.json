@@ -1,0 +1,21 @@
+{
+  "name": "maatricare",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "shared",
+    "server",
+    "web"
+  ],
+  "scripts": {
+    "dev": "concurrently -n api,web -c blue,magenta \"npm run dev -w server\" \"npm run dev -w web\"",
+    "seed": "npm run seed -w server",
+    "build": "npm run build -w web",
+    "start": "npm run start -w server",
+    "test": "npm test -w shared && npm test -w server",
+    "train": "python ml/train.py"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
